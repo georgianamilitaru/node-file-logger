@@ -23,6 +23,8 @@ let commonServices = {
         try {
             if (options.folderPath && !fs.existsSync(options.folderPath)) {
                 fs.mkdirSync(options.folderPath);
+            }
+            if (options.folderPath && fs.existsSync(options.folderPath)) {            
                 defaultOptions.folderPath = options.folderPath;
             }
         } catch(ex) {
